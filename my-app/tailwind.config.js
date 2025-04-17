@@ -16,6 +16,11 @@ module.exports = {
       },
       screens: {
         xs: "450px",
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        "2xl": "1536px",
       },
       backgroundImage: {
         "hero-pattern": "linear-gradient(to right bottom, rgba(5, 8, 22, 0.9), rgba(21, 16, 48, 0.95))",
