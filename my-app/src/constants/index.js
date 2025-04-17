@@ -1,5 +1,5 @@
-import { FaReact, FaJava, FaHtml5, FaCss3, FaDatabase } from "react-icons/fa";
-import { SiJavascript, SiCplusplus, SiPython, SiAmazonwebservices, SiGit } from "react-icons/si";
+import { FaReact, FaJava, FaHtml5, FaCss3, FaDatabase, FaAws } from "react-icons/fa";
+import { SiJavascript, SiCplusplus, SiPython, SiGit } from "react-icons/si";
 import { BsCodeSlash } from "react-icons/bs";
 
 export const navLinks = [
@@ -78,7 +78,7 @@ export const skills = [
   },
   {
     id: "skill-10",
-    icon: SiAmazonwebservices,
+    icon: FaAws,
     title: "AWS",
     description: "Basic knowledge of AWS cloud services and deployments."
   },

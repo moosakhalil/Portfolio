@@ -6,6 +6,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 import Loader from './Loader';
+import { StarsCanvas } from './canvas';
 
 export {
   Navbar,
@@ -15,5 +16,6 @@ export {
   Projects,
   Contact,
   Footer,
-  Loader
+  Loader,
+  StarsCanvas
 }; 

@@ -1,5 +1,11 @@
 {
+  "name": "portfolio",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "cd my-app && npm start",
+    "build": "cd my-app && npm install && npm run build"
+  },
   "dependencies": {
-    "react-icons": "^5.5.0"
+    "react-icons": "^4.11.0"
   }
 }

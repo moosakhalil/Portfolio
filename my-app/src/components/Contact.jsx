@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { EarthCanvas } from "./canvas";
 import { FiMail, FiPhone, FiGithub, FiLinkedin } from "react-icons/fi";
 import { personalInfo } from "../constants";
 
@@ -126,7 +127,7 @@ const Contact = () => {
           <form
             ref={formRef}
             onSubmit={handleSubmit}
-            className="bg-tertiary p-8 rounded-2xl"
+            className="bg-tertiary p-8 rounded-2xl mb-6"
           >
             <div className="mb-5">
               <label className="block text-white font-medium mb-2">Your Name</label>
@@ -175,12 +176,8 @@ const Contact = () => {
             </button>
           </form>
           
-          <div className="h-[300px] mt-8 flex items-center justify-center">
-            <div className="w-full h-full rounded-lg bg-gradient-to-br from-blue-600/30 to-purple-600/30 flex items-center justify-center overflow-hidden">
-              <div className="w-48 h-48 rounded-full bg-blue-500/50 animate-pulse" style={{ animationDuration: '3s' }}></div>
-              <div className="w-32 h-32 rounded-full bg-blue-600/50 absolute animate-ping" style={{ animationDuration: '4s' }}></div>
-              <div className="w-24 h-24 rounded-full bg-purple-600/50 absolute animate-pulse" style={{ animationDuration: '2s' }}></div>
-            </div>
+          <div className="h-[300px] xl:h-auto">
+            <EarthCanvas />
           </div>
         </motion.div>
       </div>
