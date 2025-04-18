@@ -24,9 +24,10 @@ const Hero = () => {
           </div>
 
           <div>
-            <h1 className="text-white font-black text-4xl xs:text-5xl sm:text-6xl lg:text-8xl mt-2">
-              Hi, I'm <span className="text-blue-500">{personalInfo.name.split(' ')[0]}</span>
-            </h1>
+          <h1 className="text-white font-black text-4xl xs:text-5xl sm:text-6xl lg:text-8xl mt-2">
+  Hi, I'm <span className="text-blue-500">{personalInfo.name.split(' ').slice(1).join(' ')}</span>
+</h1>
+
             <p className="text-white font-medium text-base xs:text-lg lg:text-xl mt-2 text-white-100">
               {personalInfo.tagline}
             </p>

@@ -38,9 +38,12 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <p className="text-white text-base xs:text-lg font-bold cursor-pointer flex flex-wrap">
-            <span className="whitespace-nowrap">Muhamamd Moosa</span><span className="whitespace-nowrap">&nbsp;<span className="text-blue-400">Khalil</span></span>
-          </p>
+         <p className="text-white text-base xs:text-lg font-bold cursor-pointer flex flex-wrap">
+  <span className="text-blue-400">Muhammad</span>&nbsp;
+  <span>Moosa</span>&nbsp;
+  <span className="text-blue-400">Khalil</span>
+</p>
+
         </Link>
 
         <ul className="list-none hidden md:flex flex-row gap-6 lg:gap-10">

@@ -198,7 +198,7 @@ export const education = [
 
 export const personalInfo = {
   name: "Muhammad Moosa Khalil",
-  tagline: "ReactJS Developer | Full-Stack Explorer | API Integrator",
+  tagline: "ReactJS Developer | Full-Stack Explorer ",
   email: "moosamughal21@gmail.com",
   phone: "03312674909",
   about: "I build responsive, real-time web applications with a focus on clean UI, usability, and modern web technologies.",
