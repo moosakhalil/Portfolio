@@ -13,9 +13,11 @@ const ProjectCard = ({ index, title, description, tags, image, videoDemo, source
       className="bg-tertiary p-4 sm:p-5 rounded-2xl w-full sm:w-[320px] md:w-[360px] transform transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/10"
     >
       <div className="relative w-full h-[180px] sm:h-[230px] cursor-pointer overflow-hidden rounded-lg group">
-        <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-600 flex items-center justify-center text-white text-2xl font-bold">
-          {title.charAt(0)}
-        </div>
+        <img 
+          src={`/${image}`}
+          alt={title}
+          className="w-full h-full object-cover"
+        />
 
         <div className="absolute inset-0 flex justify-end m-3">
           <div

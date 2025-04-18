@@ -59,11 +59,11 @@ const About = () => {
             className="w-full lg:w-1/2 flex justify-center"
           >
             <div className="w-[220px] h-[220px] xs:w-[280px] xs:h-[280px] md:w-[400px] md:h-[400px] overflow-hidden rounded-full border-2 sm:border-4 border-blue-500 shadow-lg shadow-blue-500/20">
-              <div className="w-full h-full bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center">
-                <h3 className="text-white text-3xl sm:text-4xl font-bold text-center px-4">
-                  M
-                </h3>
-              </div>
+              <img
+                src="/Moosa.jpg"
+                alt="Moosa Khalil"
+                className="w-full h-full object-cover"
+              />
             </div>
           </motion.div>
         </div>

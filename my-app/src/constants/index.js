@@ -99,23 +99,27 @@ export const skills = [
 export const projects = [
   {
     id: "project-1",
-    title: "Footy Insights",
+    title: (
+      <>
+        Footy Insights <br />
+        <span style={{ fontSize: "0.9em", color: "#888" }}>(IN PROGRESS)</span>
+      </>
+    ),
     description:
       "A React app with APIs and AI Chatbot integration offering real-time football stats, match details, and intelligent analysis in a responsive UI.",
     tags: ["React", "API", "AI", "Cloud"],
     image: "footy.jpg",
     videoDemo: true,
-    source_code_link: "https://github.com/",
-  },
+    source_code_link: "https://github.com/moosakhalil",
+  },  
   {
     id: "project-2",
     title: "Personality Assessment Website",
     description:
       "ReactJS application with conditional logic for personality tests. Users answer questions to receive personalized assessments based on their responses.",
     tags: ["React", "Conditional Logic", "UI/UX"],
-    image: "personality.jpg",
-    videoDemo: false,
-    source_code_link: "https://github.com/",
+    image: "PMS.jpg",
+    source_code_link: "https://github.com/moosakhalil",
   },
   {
     id: "project-3",
@@ -124,18 +128,16 @@ export const projects = [
       "A Java application with SQL backend for managing bank accounts, transactions, and customer information with a secure authentication system.",
     tags: ["Java", "SQL", "JDBC"],
     image: "bank.jpg",
-    videoDemo: false,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/moosakhalil",
   },
   {
     id: "project-4",
     title: "E-Commerce Website",
     description:
       "A full-featured online store with product listings, shopping cart, user authentication, and payment processing capabilities.",
-    tags: ["React", "SQL", "Authentication"],
+    tags: ["DBMS", "SQL", "Data"],
     image: "ecommerce.jpg",
-    videoDemo: false,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/moosakhalil",
   },
   {
     id: "project-5",
@@ -144,29 +146,39 @@ export const projects = [
       "A C# recreation of the classic Pacman arcade game with custom graphics, AI ghost behaviors, and scoring system.",
     tags: ["C#", "Game Development", "AI"],
     image: "pacman.jpg",
-    videoDemo: false,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/moosakhalil",
   },
   {
     id: "project-6",
-    title: "Console Twitter App",
+    title: "Console Person Management System",
     description:
-      "A Java-based command-line application simulating Twitter's core functionality including tweets, follows, and timeline.",
-    tags: ["Java", "CLI", "Object-Oriented"],
-    image: "twitter.jpg",
+      "A C++ OOP-based command-line application for managing person records, allowing CRUD operations with file handling, search, and sorting functionalities.",
+    tags: ["C++", "CLI", "File Handling"],
+    image: "PM.jpg",
     videoDemo: false,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/moosakhalil/Person-Management-System-C-OOP",
   },
+  
   {
     id: "project-7",
     title: "Restaurant Website",
     description:
       "A responsive restaurant website with menu display, reservation system, and beautiful UI showcasing the restaurant's offerings.",
     tags: ["HTML", "CSS", "JavaScript"],
-    image: "restaurant.jpg",
-    videoDemo: false,
-    source_code_link: "https://github.com/",
+    image: "Rest.jpg",
+    source_code_link: "https://github.com/moosakhalil",
   },
+  {
+    id: "project-8",
+    title: "Cricket League Management System",
+    description:
+      "A C++ DSA-based CLI application to manage cricket operations including user authentication, team and player management, sponsors, matches, and points table using file handling and data structures like linked lists and vectors.",
+    tags: ["C++", "CLI", "DSA", "File Handling"],
+    image: "CLS.jpg",
+    videoDemo: false,
+    source_code_link: "https://github.com/moosakhalil",
+  }
+  
 ];
 
 export const education = [
