@@ -31,9 +31,9 @@ const Hero = () => {
             <p className="text-white font-medium text-base xs:text-lg lg:text-xl mt-2 text-white-100">
               {personalInfo.tagline}
             </p>
-            <p className="text-white-100 text-sm xs:text-base sm:text-lg max-w-2xl mt-4 xs:mt-6">
-              {personalInfo.about}
-            </p>
+            <p className="text-white-100 text-sm xs:text-base sm:text-lg max-w-2xl mt-4 xs:mt-6 whitespace-pre-line">
+  {personalInfo.about}
+</p>
           </div>
         </div>
       </div>

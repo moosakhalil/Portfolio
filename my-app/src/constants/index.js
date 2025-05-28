@@ -102,14 +102,14 @@ export const projects = [
     title: (
       <>
         Footy Insights <br />
-        <span style={{ fontSize: "0.9em", color: "#888" }}>(IN PROGRESS)</span>
+    
       </>
     ),
     description:
       "A React app with APIs and AI Chatbot integration offering real-time football stats, match details, and intelligent analysis in a responsive UI.",
     tags: ["React", "API", "AI", "Cloud"],
     image: "footy.jpg",
-    videoDemo: true,
+   
     source_code_link: "https://github.com/moosakhalil",
   },  
   {
@@ -123,11 +123,11 @@ export const projects = [
   },
   {
     id: "project-3",
-    title: "Bank Management System",
+    title: "Football E-Commerce Store",
     description:
-      "A Java application with SQL backend for managing bank accounts, transactions, and customer information with a secure authentication system.",
-    tags: ["Java", "SQL", "JDBC"],
-    image: "bank.jpg",
+      "A React.js and MongoDB based web application for selling football merchandise with user authentication and real-time inventory updates.",
+    tags: ["React.js", "MongoDB", "Firebase", "JavaScript"],
+    image: "football.jpg",
     source_code_link: "https://github.com/moosakhalil",
   },
   {
@@ -141,33 +141,14 @@ export const projects = [
   },
   {
     id: "project-5",
-    title: "Pacman Game",
+    title: "Student Feedback Management System",
     description:
-      "A C# recreation of the classic Pacman arcade game with custom graphics, AI ghost behaviors, and scoring system.",
-    tags: ["C#", "Game Development", "AI"],
-    image: "pacman.jpg",
+      "A web application built with React.js that allows students to submit feedback on subjects, while admins can view feedback and average subject ratings through a dashboard.",
+    tags: ["React.js", "Firebase", "MongoDB", "JavaScript"],
+    image: "student.jpg",
     source_code_link: "https://github.com/moosakhalil",
-  },
-  {
-    id: "project-6",
-    title: "Console Person Management System",
-    description:
-      "A C++ OOP-based command-line application for managing person records, allowing CRUD operations with file handling, search, and sorting functionalities.",
-    tags: ["C++", "CLI", "File Handling"],
-    image: "PM.jpg",
-    videoDemo: false,
-    source_code_link: "https://github.com/moosakhalil/Person-Management-System-C-OOP",
-  },
-  
-  {
-    id: "project-7",
-    title: "Restaurant Website",
-    description:
-      "A responsive restaurant website with menu display, reservation system, and beautiful UI showcasing the restaurant's offerings.",
-    tags: ["HTML", "CSS", "JavaScript"],
-    image: "Rest.jpg",
-    source_code_link: "https://github.com/moosakhalil",
-  },
+  }, 
+
   {
     id: "project-8",
     title: "Cricket League Management System",
@@ -201,7 +182,7 @@ export const personalInfo = {
   tagline: "ReactJS Developer | Full-Stack Explorer ",
   email: "moosamughal21@gmail.com",
   phone: "03312674909",
-  about: "I build responsive, real-time web applications with a focus on clean UI, usability, and modern web technologies.",
+  about: "I build responsive real-time web apps with clean UI\nand modern technologies.",
   github: "https://github.com/",
   linkedin: "https://linkedin.com/",
 }; 

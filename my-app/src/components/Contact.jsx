@@ -3,12 +3,14 @@ import { motion } from "framer-motion";
 import { EarthCanvas } from "./canvas";
 import { FiMail, FiPhone, FiGithub, FiLinkedin } from "react-icons/fi";
 import { personalInfo } from "../constants";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
+    title: "",
     message: "",
   });
   const [loading, setLoading] = useState(false);
@@ -18,21 +20,31 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    
-    // This would typically use EmailJS or similar for actual sending
-    // For demo purposes, we'll simulate sending
-    setTimeout(() => {
-      alert(`Thank you ${form.name}! Your message has been sent.`);
-      setLoading(false);
+
+    try {
+      await emailjs.sendForm(
+        'service_ttsv7pr', // Replace with your EmailJS service ID
+        'template_64412nt', // Replace with your EmailJS template ID
+        formRef.current,
+        'cy5kHXWYuE0UdZwnb' // Replace with your EmailJS public key
+      );
+
+      alert('Thank you! Your message has been sent successfully.');
       setForm({
         name: "",
         email: "",
+        title: "",
         message: "",
       });
-    }, 1500);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      alert('Sorry, there was an error sending your message. Please try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -150,6 +162,19 @@ const Contact = () => {
                 value={form.email}
                 onChange={handleChange}
                 placeholder="johndoe@example.com"
+                className="bg-primary py-3 sm:py-4 px-4 sm:px-6 w-full rounded-lg text-white outline-none border-none text-sm sm:text-base"
+                required
+              />
+            </div>
+
+            <div className="mb-4 sm:mb-5">
+              <label className="block text-white font-medium text-sm sm:text-base mb-1 sm:mb-2">Subject</label>
+              <input
+                type="text"
+                name="title"
+                value={form.title}
+                onChange={handleChange}
+                placeholder="What is this regarding?"
                 className="bg-primary py-3 sm:py-4 px-4 sm:px-6 w-full rounded-lg text-white outline-none border-none text-sm sm:text-base"
                 required
               />
