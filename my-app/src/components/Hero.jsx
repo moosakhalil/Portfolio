@@ -13,12 +13,12 @@ const Hero = () => {
       const blob = await response.blob();
       const url = window.URL.createObjectURL(blob);
       
-      const link = document.createElement('a');
+    const link = document.createElement('a');
       link.href = url;
       link.download = 'Moosa_Khalil_Resume.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
       window.URL.revokeObjectURL(url);
     } catch (error) {
       console.error('Error downloading resume:', error);
@@ -47,27 +47,27 @@ const Hero = () => {
                 <span className="text-blue-600 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-blue-400">
                   {personalInfo.name.split(' ').slice(1).join(' ')}
                 </span>
-              </h1>
-              
+</h1>
+
               <p className="text-gray-800 font-medium text-base xs:text-lg sm:text-xl lg:text-2xl mt-2 sm:mt-4">
-                {personalInfo.tagline}
-              </p>
+              {personalInfo.tagline}
+            </p>
               
               <p className="text-gray-600 text-sm xs:text-base sm:text-lg mt-4 sm:mt-6 max-w-2xl">
-                {personalInfo.about}
-              </p>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={handleDownloadResume}
+  {personalInfo.about}
+</p>
+        
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={handleDownloadResume}
                 className="mt-6 sm:mt-8 bg-gradient-to-r from-blue-400 to-blue-600 hover:from-blue-500 hover:to-blue-700 text-white py-3 px-6 sm:px-8 rounded-xl font-bold shadow-lg text-base sm:text-lg transition-all duration-300 flex items-center gap-2 mx-auto lg:mx-0 group border-2 border-blue-300"
-              >
+        >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 group-hover:translate-y-0.5 transition-transform text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
                   <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
                 </svg>
-                Download Resume
-              </motion.button>
+          Download Resume
+        </motion.button>
             </motion.div>
           </div>
 

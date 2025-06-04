@@ -6,6 +6,7 @@
     "build": "cd my-app && npm install && npm run build"
   },
   "dependencies": {
+    "lucide-react": "^0.513.0",
     "react-icons": "^4.11.0"
   }
 }

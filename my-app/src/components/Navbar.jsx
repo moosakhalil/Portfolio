@@ -19,7 +19,6 @@ const Navbar = () => {
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -60,38 +59,48 @@ const Navbar = () => {
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          <div
-            className="text-gray-900 text-2xl cursor-pointer"
+          <button
+            className="text-gray-900 text-2xl cursor-pointer z-50"
             onClick={() => setToggle(!toggle)}
+            aria-label="Toggle menu"
           >
             {toggle ? <FiX /> : <FiMenu />}
-          </div>
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } absolute top-16 right-0 mx-4 my-2 min-w-[140px] w-full max-w-xs rounded-xl bg-blue-100/95 shadow-lg z-50 flex-col gap-4 p-6`}
-          >
-            <ul className="list-none flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-blue-600 font-bold" : "text-gray-700 hover:text-blue-500"
-                  } text-base cursor-pointer transition-colors duration-200`}
-                  onClick={() => {
-                    setToggle(false);
-                    setActive(link.title);
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          </button>
+          
+          {toggle && (
+            <>
+              {/* Overlay */}
+              <div 
+                className="fixed inset-0 bg-black/50 z-40"
+                onClick={() => setToggle(false)}
+              />
+              {/* Menu */}
+              <div className="fixed top-16 right-4 w-[calc(100%-2rem)] max-w-xs bg-white rounded-xl shadow-lg z-50 p-6">
+                <ul className="list-none flex flex-col gap-4">
+                  {navLinks.map((link) => (
+                    <li
+                      key={link.id}
+                      className={`${
+                        active === link.title ? "text-blue-600 font-bold" : "text-gray-700 hover:text-blue-500"
+                      } text-base cursor-pointer transition-colors duration-200`}
+                      onClick={() => {
+                        setToggle(false);
+                        setActive(link.title);
+                      }}
+                    >
+                      <a href={`#${link.id}`} className="block w-full">
+                        {link.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar; 
+export default Navbar;
