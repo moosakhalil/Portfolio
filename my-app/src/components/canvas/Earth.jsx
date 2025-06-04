@@ -6,7 +6,7 @@ import CanvasLoader from "../Loader";
 const Earth = () => {
   return (
     <mesh>
-      <hemisphereLight intensity={0.3} groundColor="black" />
+      <hemisphereLight intensity={0.5} groundColor="#e0f2fe" />
       <spotLight
         position={[-20, 50, 10]}
         angle={0.12}
@@ -14,15 +14,15 @@ const Earth = () => {
         intensity={1}
         castShadow
       />
-      <pointLight intensity={1} />
+      <pointLight intensity={1} color="#fde68a" />
       
       <mesh>
         <sphereGeometry args={[2, 32, 32]} />
-        <meshPhongMaterial 
-          color="#0077ff"
-          emissive="#000055"
-          specular="#ffffff"
-          shininess={50}
+        <meshStandardMaterial 
+          color="#38bdf8"
+          emissive="#0ea5e9"
+          metalness={0.3}
+          roughness={0.3}
         />
       </mesh>
     </mesh>

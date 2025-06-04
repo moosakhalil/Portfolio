@@ -151,7 +151,7 @@ export const projects = [
   }, 
 
   {
-    id: "project-8",
+    id: "project-5",
     title: "Cricket League Management System",
     description:
       "A C++ DSA-based CLI application to manage cricket operations including user authentication, team and player management, sponsors, matches, and points table using file handling and data structures like linked lists and vectors.",

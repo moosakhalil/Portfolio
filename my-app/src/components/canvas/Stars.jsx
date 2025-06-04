@@ -29,13 +29,34 @@ const Stars = (props) => {
     }
   });
 
+  // Render two sets of points: blue-violet and a few yellow/white for vibrancy
   return (
     <group rotation={[0, 0, Math.PI / 4]}>
+      {/* Main blue-violet stars */}
       <Points ref={ref} positions={sphere} stride={3} frustumCulled {...props}>
         <PointMaterial
           transparent
-          color='#f272c8'
+          color="#7dd3fc" // blue-violet
+          size={0.004}
+          sizeAttenuation={true}
+          depthWrite={false}
+        />
+      </Points>
+      {/* A few yellow/white stars for vibrancy */}
+      <Points positions={sphere} stride={3} frustumCulled {...props}>
+        <PointMaterial
+          transparent
+          color="#fde68a" // yellow
           size={0.002}
+          sizeAttenuation={true}
+          depthWrite={false}
+        />
+      </Points>
+      <Points positions={sphere} stride={3} frustumCulled {...props}>
+        <PointMaterial
+          transparent
+          color="#fff" // white
+          size={0.0015}
           sizeAttenuation={true}
           depthWrite={false}
         />
@@ -46,7 +67,7 @@ const Stars = (props) => {
 
 const StarsCanvas = () => {
   return (
-    <div className='w-full h-auto absolute inset-0 z-[-1]'>
+    <div className='w-full h-full absolute inset-0 z-0'>
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <Stars />

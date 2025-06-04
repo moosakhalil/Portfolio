@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav
       className={`${
-        scrolled ? "bg-primary bg-opacity-80 backdrop-blur-md" : "bg-transparent"
+        scrolled ? "bg-blue-100/95 shadow-md backdrop-blur-md border-b border-blue-200" : "bg-gradient-to-r from-blue-50 via-blue-100 to-yellow-50"
       } w-full flex items-center py-3 xs:py-4 sm:py-5 fixed top-0 z-20 transition-all duration-300`}
     >
       <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-4 xs:px-6 md:px-8">
@@ -38,54 +38,52 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-         <p className="text-white text-base xs:text-lg font-bold cursor-pointer flex flex-wrap">
-  <span className="text-blue-400">Muhammad</span>&nbsp;
-  <span>Moosa</span>&nbsp;
-  <span className="text-blue-400">Khalil</span>
-</p>
-
+          <p className="text-gray-900 text-base xs:text-lg font-bold cursor-pointer flex flex-wrap">
+            <span className="text-blue-500">Muhammad</span>&nbsp;
+            <span>Moosa</span>&nbsp;
+            <span className="text-blue-500">Khalil</span>
+          </p>
         </Link>
 
-        <ul className="list-none hidden md:flex flex-row gap-6 lg:gap-10">
-          {navLinks.map((nav) => (
+        <ul className="list-none hidden sm:flex flex-row gap-8">
+          {navLinks.map((link) => (
             <li
-              key={nav.id}
+              key={link.id}
               className={`${
-                active === nav.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[16px] lg:text-[18px] font-medium cursor-pointer transition-colors duration-200`}
-              onClick={() => setActive(nav.title)}
+                active === link.title ? "text-blue-600 font-bold" : "text-gray-700 hover:text-blue-500"
+              } text-base cursor-pointer transition-colors duration-200`}
+              onClick={() => setActive(link.title)}
             >
-              <a href={`#${nav.id}`}>{nav.title}</a>
+              <a href={`#${link.id}`}>{link.title}</a>
             </li>
           ))}
         </ul>
 
-        <div className="md:hidden flex flex-1 justify-end items-center">
-          <button
+        <div className="sm:hidden flex flex-1 justify-end items-center">
+          <div
+            className="text-gray-900 text-2xl cursor-pointer"
             onClick={() => setToggle(!toggle)}
-            className="text-white w-8 h-8 xs:w-9 xs:h-9 flex items-center justify-center"
           >
-            {toggle ? <FiX size={24} /> : <FiMenu size={24} />}
-          </button>
-
+            {toggle ? <FiX /> : <FiMenu />}
+          </div>
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-4 xs:p-6 bg-gradient-to-r from-black to-gray-900 absolute top-16 xs:top-20 right-0 mx-4 my-2 min-w-[140px] z-10 rounded-xl`}
+            } p-6 bg-blue-100/95 shadow-lg absolute top-16 right-0 mx-4 my-2 min-w-[140px] rounded-xl z-30 flex-col gap-4`}
           >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col gap-3 xs:gap-4">
-              {navLinks.map((nav) => (
+            <ul className="list-none flex flex-col gap-4">
+              {navLinks.map((link) => (
                 <li
-                  key={nav.id}
-                  className={`font-poppins font-medium cursor-pointer text-[14px] xs:text-[16px] ${
-                    active === nav.title ? "text-white" : "text-secondary"
-                  }`}
+                  key={link.id}
+                  className={`${
+                    active === link.title ? "text-blue-600 font-bold" : "text-gray-700 hover:text-blue-500"
+                  } text-base cursor-pointer transition-colors duration-200`}
                   onClick={() => {
-                    setToggle(!toggle);
-                    setActive(nav.title);
+                    setToggle(false);
+                    setActive(link.title);
                   }}
                 >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
+                  <a href={`#${link.id}`}>{link.title}</a>
                 </li>
               ))}
             </ul>
