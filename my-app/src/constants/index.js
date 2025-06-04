@@ -114,6 +114,15 @@ export const projects = [
   },  
   {
     id: "project-2",
+    title: "AI Football E-Commerce Store",
+    description:
+      "A React.js and MongoDB based web application for selling football merchandise with user authentication and real-time inventory updates.",
+    tags: ["React.js", "MongoDB", "Firebase", "JavaScript"],
+    image: "football.jpg",
+    source_code_link: "https://github.com/moosakhalil",
+  },
+  {
+    id: "project-3",
     title: "Personality Assessment Website",
     description:
       "ReactJS application with conditional logic for personality tests. Users answer questions to receive personalized assessments based on their responses.",
@@ -121,15 +130,7 @@ export const projects = [
     image: "PMS.jpg",
     source_code_link: "https://github.com/moosakhalil",
   },
-  {
-    id: "project-3",
-    title: "Football E-Commerce Store",
-    description:
-      "A React.js and MongoDB based web application for selling football merchandise with user authentication and real-time inventory updates.",
-    tags: ["React.js", "MongoDB", "Firebase", "JavaScript"],
-    image: "football.jpg",
-    source_code_link: "https://github.com/moosakhalil",
-  },
+ 
   {
     id: "project-4",
     title: "E-Commerce Website",
