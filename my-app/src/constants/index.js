@@ -167,13 +167,13 @@ export const education = [
   {
     title: "Bahria University",
     degree: "Computer Science",
-    date: "2021 - 2026 (Expected)",
+    date: "2022 - 2026 (Expected)",
     description: "Currently pursuing a Bachelor's degree in Computer Science with focus on web development and software engineering.",
   },
   {
     title: "Cadet College Petaro",
     degree: "Pre-Engineering",
-    date: "2018 - 2020",
+    date: "2019 - 2021",
     description: "Completed pre-engineering studies with strong foundation in mathematics and physics.",
   },
 ];
