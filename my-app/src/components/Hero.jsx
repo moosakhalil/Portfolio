@@ -27,12 +27,12 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full min-h-[80vh] mx-auto overflow-hidden flex flex-col items-center bg-gradient-to-br from-blue-100 via-blue-50 to-yellow-50">
+    <section id="hero" className="relative w-full min-h-[80vh] mx-auto overflow-hidden flex flex-col items-center bg-gradient-to-br from-blue-100 via-blue-50 to-yellow-50 w-full max-w-full overflow-x-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-blue-200/60 via-blue-100/40 to-yellow-100/30 z-0" />
       
       {/* Main content container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 md:px-8 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 md:px-8 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-8 sm:pb-12 md:pb-16 w-full max-w-full">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-12">
           {/* Left content */}
           <div className="flex-1 text-center lg:text-left max-w-2xl mx-auto lg:mx-0">

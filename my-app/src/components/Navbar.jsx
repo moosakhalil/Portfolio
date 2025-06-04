@@ -27,9 +27,9 @@ const Navbar = () => {
     <nav
       className={`${
         scrolled ? "bg-blue-100/95 shadow-md backdrop-blur-md border-b border-blue-200" : "bg-gradient-to-r from-blue-50 via-blue-100 to-yellow-50"
-      } w-full flex items-center py-3 xs:py-4 sm:py-5 fixed top-0 z-20 transition-all duration-300`}
+      } w-full max-w-full flex items-center py-3 xs:py-4 sm:py-5 fixed top-0 z-20 transition-all duration-300 overflow-x-hidden`}
     >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto px-4 xs:px-6 md:px-8">
+      <div className="w-full max-w-full flex justify-between items-center max-w-7xl mx-auto px-4 xs:px-6 md:px-8">
         <Link
           to="/"
           className="flex items-center gap-2"
@@ -69,7 +69,7 @@ const Navbar = () => {
           <div
             className={`${
               !toggle ? "hidden" : "flex"
-            } p-6 bg-blue-100/95 shadow-lg absolute top-16 right-0 mx-4 my-2 min-w-[140px] rounded-xl z-30 flex-col gap-4`}
+            } p-6 bg-blue-100/95 shadow-lg absolute top-16 right-0 mx-4 my-2 min-w-[140px] w-full max-w-xs rounded-xl z-30 flex-col gap-4`}
           >
             <ul className="list-none flex flex-col gap-4">
               {navLinks.map((link) => (
