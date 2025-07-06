@@ -12,6 +12,10 @@ export const navLinks = [
     title: "Skills",
   },
   {
+    id: "certificates",
+    title: "Certificates",
+  },
+  {
     id: "projects",
     title: "Projects",
   },
@@ -161,6 +165,29 @@ export const projects = [
     source_code_link: "https://github.com/moosakhalil",
   }
   
+];
+
+export const certificates = [
+  {
+    id: "cert-1",
+    title: "Foundations of Cybersecurity",
+    issuer: "Google via Coursera",
+    date: "2023",
+    description: "An introductory course exploring core concepts in cybersecurity including types of threats, security frameworks, tools, and career pathways.",
+    tags: ["Cybersecurity", "Information Security", "Google", "Coursera"],
+    image: "cert2.jpg", // Replace with actual image if available
+    credential_link: "https://www.coursera.org/account/accomplishments/verify/WSCPZLZPZXFX" // Replace with actual link
+  },
+  {
+    id: "cert-2",
+    title: "Generative AI: Beyond the Chatbot",
+    issuer: "Google via Coursera",
+    date: "2024",
+    description: "Explores real-world applications of generative AI beyond chatbots, including content creation, coding, personalization, and enterprise use cases.",
+    tags: ["Generative AI", "Machine Learning", "Google", "Coursera", "AI Applications"],
+    image: "cert1.jpg", // Replace with actual image if available
+    credential_link: "https://coursera.org/verify/your-cert-id" // Replace with your actual link
+  },
 ];
 
 export const education = [

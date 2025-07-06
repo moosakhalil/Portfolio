@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import { FiMenu, FiX } from "react-icons/fi";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
@@ -21,6 +22,18 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (toggle) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [toggle]);
 
   return (
     <nav
@@ -44,6 +57,7 @@ const Navbar = () => {
           </p>
         </Link>
 
+        {/* Desktop Navigation */}
         <ul className="list-none hidden sm:flex flex-row gap-8">
           {navLinks.map((link) => (
             <li
@@ -58,45 +72,78 @@ const Navbar = () => {
           ))}
         </ul>
 
+        {/* Mobile Navigation */}
         <div className="sm:hidden flex flex-1 justify-end items-center">
           <button
-            className="text-gray-900 text-2xl cursor-pointer z-50"
+            className={`w-10 h-10 flex items-center justify-center rounded-lg transition-colors duration-200 ${
+              toggle ? 'bg-blue-100' : 'hover:bg-blue-50'
+            }`}
             onClick={() => setToggle(!toggle)}
             aria-label="Toggle menu"
           >
-            {toggle ? <FiX /> : <FiMenu />}
+            <motion.div
+              initial={false}
+              animate={{ rotate: toggle ? 90 : 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              {toggle ? (
+                <FiX className="text-2xl text-blue-600" />
+              ) : (
+                <FiMenu className="text-2xl text-gray-900" />
+              )}
+            </motion.div>
           </button>
           
-          {toggle && (
-            <>
-              {/* Overlay */}
-              <div 
-                className="fixed inset-0 bg-black/50 z-40"
-                onClick={() => setToggle(false)}
-              />
-              {/* Menu */}
-              <div className="fixed top-16 right-4 w-[calc(100%-2rem)] max-w-xs bg-white rounded-xl shadow-lg z-50 p-6">
-                <ul className="list-none flex flex-col gap-4">
-                  {navLinks.map((link) => (
-                    <li
-                      key={link.id}
-                      className={`${
-                        active === link.title ? "text-blue-600 font-bold" : "text-gray-700 hover:text-blue-500"
-                      } text-base cursor-pointer transition-colors duration-200`}
-                      onClick={() => {
-                        setToggle(false);
-                        setActive(link.title);
-                      }}
-                    >
-                      <a href={`#${link.id}`} className="block w-full">
-                        {link.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </>
-          )}
+          <AnimatePresence>
+            {toggle && (
+              <>
+                {/* Backdrop */}
+                <motion.div 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40"
+                  onClick={() => setToggle(false)}
+                />
+                
+                {/* Mobile Menu */}
+                <motion.div
+                  initial={{ opacity: 0, y: -20, scale: 0.95 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -20, scale: 0.95 }}
+                  transition={{ duration: 0.2 }}
+                  className="fixed top-[calc(4rem+1px)] inset-x-4 bg-white rounded-2xl shadow-lg z-50 overflow-hidden border border-blue-100"
+                >
+                  <div className="p-2">
+                    {navLinks.map((link, index) => (
+                      <motion.div
+                        key={link.id}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <a
+                          href={`#${link.id}`}
+                          className={`flex items-center px-4 py-3 rounded-xl transition-colors duration-200 ${
+                            active === link.title
+                              ? "bg-blue-50 text-blue-600 font-semibold"
+                              : "text-gray-700 hover:bg-gray-50"
+                          }`}
+                          onClick={() => {
+                            setToggle(false);
+                            setActive(link.title);
+                          }}
+                        >
+                          {link.title}
+                        </a>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              </>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </nav>

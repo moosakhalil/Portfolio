@@ -6,6 +6,7 @@ import Projects from './Projects';
 import Contact from './Contact';
 import Footer from './Footer';
 import Loader from './Loader';
+import Certificates from './Certificates';
 import { StarsCanvas } from './canvas';
 
 export {
@@ -17,5 +18,6 @@ export {
   Contact,
   Footer,
   Loader,
+  Certificates,
   StarsCanvas
 }; 
