@@ -188,6 +188,16 @@ export const certificates = [
     image: "cert1.jpg", // Replace with actual image if available
     credential_link: "https://coursera.org/verify/your-cert-id" // Replace with your actual link
   },
+  {
+    id: "cert-3",
+  title: "Foundations of User Experience (UX) Design",
+  issuer: "Google via Coursera",
+  date: "2024",
+  description: "Covers the fundamentals of UX design, including user-centered design, design thinking, research methods, wireframing, and prototyping.",
+  tags: ["UX Design", "User Experience", "Google", "Coursera", "Design Thinking"],
+  image: "cert3.jpg", // Replace with actual image if available
+
+  },
 ];
 
 export const education = [
