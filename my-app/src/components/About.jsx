@@ -36,7 +36,17 @@ const About = () => {
                     key={`education-${index}`}
                     className="border-l-4 border-blue-300 pl-6 py-2 bg-white/60 rounded-lg shadow-sm"
                   >
-                    <h4 className="text-gray-900 font-bold text-lg sm:text-xl">{edu.title}</h4>
+                    <div className="flex items-center gap-3">
+                      {index < 2 && (
+                        <img
+                          src={index === 0 ? "/uni.jpg" : "/college.jpg"}
+                          alt={`${edu.title} logo`}
+                          className="w-10 h-10 rounded-full object-cover border border-blue-200 bg-white"
+                          loading="lazy"
+                        />
+                      )}
+                      <h4 className="text-gray-900 font-bold text-lg sm:text-xl">{edu.title}</h4>
+                    </div>
                     <p className="text-blue-500 mt-1 text-sm sm:text-base">{edu.degree}</p>
                     <p className="text-gray-500 mt-1 text-sm sm:text-base">{edu.date}</p>
                     <p className="text-gray-700 mt-2 text-sm sm:text-base">{edu.description}</p>

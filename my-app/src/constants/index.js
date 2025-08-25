@@ -190,13 +190,21 @@ export const certificates = [
   },
   {
     id: "cert-3",
-  title: "Foundations of User Experience (UX) Design",
-  issuer: "Google via Coursera",
-  date: "2024",
-  description: "Covers the fundamentals of UX design, including user-centered design, design thinking, research methods, wireframing, and prototyping.",
-  tags: ["UX Design", "User Experience", "Google", "Coursera", "Design Thinking"],
-  image: "cert3.jpg", // Replace with actual image if available
-
+    title: "Foundations of User Experience (UX) Design",
+    issuer: "Google via Coursera",
+    date: "2024",
+    description: "Covers the fundamentals of UX design, including user-centered design, design thinking, research methods, wireframing, and prototyping.",
+    tags: ["UX Design", "User Experience", "Google", "Coursera", "Design Thinking"],
+    image: "cert3.jpg", // Replace with actual image if available
+  },
+  {
+    id: "cert-4",
+    title: "HTML and CSS in Depth",
+    issuer: "Meta via Coursera",
+    date: "2024",
+    description: "Acquired advanced knowledge of semantic HTML, responsive layouts, Flexbox, Grid, and modern CSS techniques to build accessible, visually appealing, and scalable web interfaces.",
+    tags: ["HTML", "CSS", "Flexbox", "Grid", "Responsive Design", "Accessibility", "Coursera", "Meta"],
+    image: "cert4.jpg"
   },
 ];
 
