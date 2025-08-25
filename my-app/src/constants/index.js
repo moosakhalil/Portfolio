@@ -12,6 +12,10 @@ export const navLinks = [
     title: "Skills",
   },
   {
+    id: "experience",
+    title: "Experience",
+  },
+  {
     id: "certificates",
     title: "Certificates",
   },
@@ -211,15 +215,26 @@ export const certificates = [
 export const education = [
   {
     title: "Bahria University",
-    degree: "Computer Science",
+    degree: "Software Engineering",
     date: "2022 - 2026 (Expected)",
     description: "Currently pursuing a Bachelor's degree in Computer Science with focus on web development and software engineering.",
   },
   {
     title: "Cadet College Petaro",
-    degree: "Pre-Engineering",
+    degree: "FSC Pre-Engineering",
     date: "2019 - 2021",
     description: "Completed pre-engineering studies with strong foundation in mathematics and physics.",
+  },
+];
+
+export const experiences = [
+  {
+    title: "Software Development Intern",
+    company: "Jazba Innovations",
+    dates: "July 14, 2025 – August 22, 2025",
+    description:
+      "Worked on JavaScript (ES6+), Node.js, Express.js, Tailwind CSS, and Webpack to develop and optimize responsive web applications. Enhanced skills in debugging, deployment, and teamwork while collaborating with senior developers.",
+    image: "work.jpg",
   },
 ];
 

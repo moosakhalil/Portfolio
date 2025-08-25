@@ -7,6 +7,7 @@ import Contact from './Contact';
 import Footer from './Footer';
 import Loader from './Loader';
 import Certificates from './Certificates';
+import WorkExperience from './WorkExperience';
 import { StarsCanvas } from './canvas';
 
 export {
@@ -19,5 +20,6 @@ export {
   Footer,
   Loader,
   Certificates,
+  WorkExperience,
   StarsCanvas
-}; 
+};
